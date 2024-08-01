@@ -49,7 +49,7 @@ func ExecuteWithGasRetries(
 					"attempt", attempt,
 					"reason", text,
 				)
-				panic(err)
+				panic(text)
 			}
 			options.GasLimit *= 2
 			slog.Warn(
